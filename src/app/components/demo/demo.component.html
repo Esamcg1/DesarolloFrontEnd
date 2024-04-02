@@ -1,0 +1,16 @@
+<h1>Primer titulo</h1>
+{{title}}
+<input type="text" [(ngModel)]="title">
+<div>
+    <p *ngIf="title === 'Si'">Este texto aparece cuando se cumple la condicion</p>
+</div>
+
+
+<button (click)="agregarElemento()">Agregar elemento</button>
+
+<ul>
+    <li *ngFor="let lastname of items; index as i">
+        {{lastname}}{{i}}
+        <button (click)="eliminarElemento()">Elimiar</button>
+    </li>
+</ul>
